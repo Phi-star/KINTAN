@@ -243,7 +243,7 @@ body {
 .testimonial-container {
     display: flex;
     width: 1000%;
-    animation: slideTestimonial 180s infinite linear; /* Changed from 60s to 180s */
+    animation: slideTestimonial 1000s infinite linear; /* Changed from 60s to 180s */
 }
 
 .testimonial-container img {
@@ -398,5 +398,39 @@ body {
     font-size: 14px;
     font-weight: bold;
     margin-top: 50px;
-                                  }
-    
+}
+/* Price Tag Styling */
+.price-tag {
+    text-align: center;
+    margin-top: 15px;
+    background: #fff7e6; /* Light golden background */
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ff9900; /* Gold border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.price-tag p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.price-tag .normal-price {
+    color: #ff4d4d; /* Red for original price */
+    text-decoration: line-through;
+}
+
+.price-tag .promo-price {
+    color: #017B5E; /* Green for promo price */
+}
+
+.price-tag .promo-price span {
+    font-size: 24px;
+}
+
+.price-tag .note {
+    color: #ff4d4d;
+    font-size: 18px;
+    font-weight: bold;
+}
