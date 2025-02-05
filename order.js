@@ -21,17 +21,41 @@ document.getElementById("orderForm").addEventListener("submit", function(event) 
                      + `🚀 Order is ready for processing.`;
 
     sendOrderToTelegram(orderDetails);
-
-    window.location.href = "./success.html";
 });
 
 function sendOrderToTelegram(message) {
     const botToken = "7862409334:AAH67G2Q8sZFQFAipBqze9EcS6W1tyV6MoI";
     const chatId = "6300694007";
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    let data = {
+        chat_id: chatId,
+        text: message,
+    };
+
+    // Fix for iOS Safari fetch issues
+    fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: chatId, text: message })
-    }).catch(error => console.error("Error sending message to Telegram:", error));
+        mode: "cors", // Ensures cross-origin request works
+        cache: "no-cache", // Prevents iOS caching issues
+        credentials: "omit", // Ensures request is allowed on all devices
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.ok) {
+            window.location.href = "./success.html"; // Redirect only if successful
+        } else {
+            alert("Failed to send order. Please try again.");
+            console.error("Telegram API Error:", result);
+        }
+    })
+    .catch(error => {
+        alert("Network error! Please check your internet connection.");
+        console.error("Fetch Error:", error);
+    });
 }
