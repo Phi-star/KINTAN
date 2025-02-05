@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order - KINTAN Herba Capsule</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <div class="order-container">
+        <h2>Fill in the following details to place an order</h2>
+
+        <form id="orderForm">
+            <label for="name">Name (Required)</label>
+            <input type="text" id="name" required>
+
+            <label for="number">Phone Number (Required)</label>
+            <input type="tel" id="number" required>
+
+            <label for="altNumber">Alternative Number (Optional)</label>
+            <input type="tel" id="altNumber">
+
+            <label for="address">Address (Required)</label>
+            <input type="text" id="address" required>
+
+            <label for="packs">Select Packs</label>
+            <select id="packs" required>
+                <option value="" disabled selected>Select pack</option>
+                <option value="2 Packs - 25,000">2 Packs - ₦25,000 (Promo)</option>
+                <option value="3 Packs - 35,000">3 Packs - ₦35,000 (Promo)</option>
+                <option value="4 Packs - 45,000">4 Packs - ₦45,000 (Promo)</option>
+                <option value="5 Packs - 55,000">5 Packs - ₦55,000 (Promo)</option>
+                <option value="10 Packs - 100,000">10 Packs - ₦100,000 (Promo)</option>
+            </select>
+
+            <p class="warning">⚠️ Don't place an order if you are not ready to receive it.</p>
+
+            <button type="submit" class="place-order-btn">Place Now</button>
+        </form>
+    </div>
+
+    <script src="order.js"></script>
+
+</body>
+</html>
