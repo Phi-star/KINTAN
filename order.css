@@ -66,3 +66,9 @@ input, select {
 .place-order-btn:active {
     transform: scale(0.98);
 }
+.contact-info {
+    color: #014D3A;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
