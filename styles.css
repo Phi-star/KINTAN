@@ -417,15 +417,15 @@ body {
 }
 
 .price-tag .normal-price {
-    color: #ff4d4d; /* Red for original price */
-    text-decoration: line-through;
+    color: #333; /* Standard black text for normal price */
 }
 
 .price-tag .promo-price {
     color: #017B5E; /* Green for promo price */
+    font-size: 22px;
 }
 
-.price-tag .promo-price span {
+.price-tag .promo-price strong {
     font-size: 24px;
 }
 
