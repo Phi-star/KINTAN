@@ -3,434 +3,361 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #f9f9f9;
     color: #333;
-    text-align: center;
+    line-height: 1.6;
 }
 
-/* Promo Banner */
-.promo-banner {
-    background: linear-gradient(135deg, #ff4d4d, #d60000);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Main Container */
 .container {
-    max-width: 700px;
-    margin: 50px auto;
-    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Product Header */
+.product-header {
+    text-align: center;
+    padding: 30px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.title {
+    color: #2a7f62;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.product-image-container {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.product-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Price Tag */
+.price-tag {
+    background: #fff9e6;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.price-tag .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2a7f62;
+    margin: 0;
+}
+
+.price-tag .note {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+
+/* Content Styling */
+.content {
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
 }
 
-/* Title */
-.title {
-    color: #017B5E;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Content */
 .content p {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
     margin-bottom: 15px;
     color: #444;
 }
 
 .highlight {
-    color: #014D3A;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Section Styling */
-.section {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 700px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #2a7f62;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f9f5;
     border-radius: 8px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 4.2s ease-out forwards;
+    border-left: 4px solid #2a7f62;
 }
 
-/* Fade-in effect for images */
-.product-image, .nafada-image {
-    width: 100%;
-    max-width: 400px;
+/* Sections */
+.section {
+    background: #fff;
+    padding: 30px;
     border-radius: 10px;
-    margin: 15px 0;
-    opacity: 0;
-    animation: fadeIn 3.0s ease-in-out forwards;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section h2 {
+    color: #2a7f62;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Benefits List */
+.full-width-section {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.symptoms-section {
+    background: #f0f9f5;
+}
+
+.testimonials-section {
+    background: #f5f5f5;
+}
+
+.promo-section {
+    background: #2a7f62;
+    color: white;
+    text-align: center;
+}
+
+.promo-section h2 {
+    color: white;
+}
+
+/* Lists */
 .benefits-list {
     list-style: none;
     padding: 0;
-    font-size: 16px;
+    margin: 20px 0;
 }
 
 .benefits-list li {
-    margin: 5px 0;
-}
-/* Order Now Button Styling */
-.order-button {
-    display: inline-block;
-    background: linear-gradient(135deg, #017B5E, #014D3A);
-    color: white;
-    padding: 18px 35px; /* Increased padding for larger size */
-    text-decoration: none;
-    font-size: 22px; /* Bigger text */
-    font-weight: bold;
-    border-radius: 10px; /* Slightly more rounded */
-    margin-top: 20px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25); /* Stronger shadow */
-    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-    display: block; /* Makes it full-width */
-    width: 80%; /* Takes up more space */
-    max-width: 400px; /* Ensures it doesn’t get too wide */
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hover & Active Effects */
-.order-button:hover {
-    background: linear-gradient(135deg, #014D3A, #017B5E);
-    transform: scale(1.08); /* More noticeable hover effect */
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
-}
-
-.order-button:active {
-    transform: scale(0.96);
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* General Section Styling */
-#symptoms {
-    text-align: center;
-    margin: 40px 20px;
-    padding: 20px;
-}
-
-#symptoms h2 {
-    font-size: 36px;
-    color: #4b4b4b;
-    margin-bottom: 20px;
-}
-
-#symptoms p {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #f0f9f5;
+    border-radius: 5px;
     font-size: 16px;
-    color: #777;
-    margin-bottom: 20px;
 }
 
-#symptoms h3 {
-    font-size: 28px;
-    color: #000;
-    margin-top: 30px;
+.expert-list {
+    text-align: left;
+    padding-left: 20px;
 }
 
-#symptoms ul {
-    list-style-type: none;
-    padding: 0;
+.expert-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-#symptoms ul li {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
+.symptoms-list {
+    text-align: left;
+    padding-left: 20px;
+    column-count: 2;
+    column-gap: 30px;
 }
 
+.symptoms-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Infection Types */
 .infection-types {
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
 }
 
-.infection-types div {
-    width: 22%;
+.infection-type {
+    background: #fff;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.infection-types h4 {
-    font-size: 22px;
-    color: #4b4b4b;
-}
-
-.infection-images img {
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeIn 0.7s ease forwards;
-}
-
-.infection-images img:nth-child(odd) {
-    animation-delay: 0.3s;
-}
-
-.infection-images img:nth-child(even) {
-    animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Testimonial Section */
-#testimonials {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-#testimonials h2 {
-    font-size: 28px;
-    color: #014D3A;
-    margin-bottom: 15px;
-}
-
-#testimonials p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Testimonial Slider */
-.testimonial-slider {
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: left;
 }
 
-/* Testimonial Images */
+.infection-type h4 {
+    color: #2a7f62;
+    font-size: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid #f0f9f5;
+    padding-bottom: 10px;
+}
+
+.infection-type p {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+/* Testimonials */
+.testimonial-slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 .testimonial-container {
     display: flex;
     width: 1000%;
-    animation: slideTestimonial 1000s infinite linear; /* Changed from 60s to 180s */
+    animation: slideTestimonial 100s infinite linear;
 }
 
 .testimonial-container img {
-    width: 100%;
-    max-width: 600px;
+    width: 10%;
     height: auto;
-    border-radius: 10px;
 }
 
-/* Smooth Auto-Sliding Effect */
-@keyframes slideTestimonial {
-    0% { transform: translateX(0%); }
-    10% { transform: translateX(0%); }
-    20% { transform: translateX(-100%); }
-    30% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    50% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    70% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
-    90% { transform: translateX(-400%); }
-    100% { transform: translateX(0%); }
-}
-/* Written Testimonials Section */
-#written-testimonials {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f2f2f2;
-}
-
-#written-testimonials h2 {
-    font-size: 28px;
-    color: #014D3A;
-    margin-bottom: 15px;
-}
-
-#written-testimonials p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Testimonial Boxes */
 .testimonial-boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
-    max-width: 1000px;
-    margin: auto;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 .testimonial {
-    background: white;
-    padding: 20px;
+    background: #fff;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
     position: relative;
-    font-size: 16px;
-    color: #333;
-    animation: fadeIn 1s ease-in-out;
 }
 
-/* Speech Bubble Effect */
 .testimonial::before {
     content: "“";
-    font-size: 50px;
-    color: #017B5E;
+    font-size: 60px;
+    color: #2a7f62;
     position: absolute;
-    top: -10px;
-    left: 10px;
+    top: 10px;
+    left: 15px;
+    opacity: 0.2;
     font-family: serif;
 }
 
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
 .testimonial h4 {
+    color: #2a7f62;
     text-align: right;
-    color: #017B5E;
-    font-weight: bold;
-    margin-top: 10px;
+    margin: 0;
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* Promo Section */
-#promo {
-    text-align: center;
-    padding: 50px 20px;
-    background: white;
-}
-
-#promo h2 {
-    font-size: 28px;
-    color: #014D3A;
-    margin-bottom: 15px;
-}
-
-#promo p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Promo Feature Boxes */
-.promo-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.promo-feature {
-    background: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-    transition: transform 0.3s ease-in-out;
-}
-
-.promo-feature:hover {
-    transform: scale(1.05);
-}
-
-/* Feature Icons */
-.promo-feature img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-}
-
-.promo-feature h3 {
-    font-size: 20px;
-    color: #017B5E;
-    margin-bottom: 10px;
-}
-/* Footer Section */
-#footer {
-    text-align: center;
-    padding: 15px;
-    background: #014D3A;
+/* Order Button */
+.order-button {
+    display: inline-block;
+    background: #2a7f62;
     color: white;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.order-button:hover {
+    background: #1f6b50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.order-button:active {
+    transform: translateY(0);
+}
+
+/* Approval Section */
+.approval-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.nafada-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes slideTestimonial {
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(0%); }
+    20% { transform: translateX(-10%); }
+    30% { transform: translateX(-10%); }
+    40% { transform: translateX(-20%); }
+    50% { transform: translateX(-20%); }
+    60% { transform: translateX(-30%); }
+    70% { transform: translateX(-30%); }
+    80% { transform: translateX(-40%); }
+    90% { transform: translateX(-40%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Footer */
+#footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
     margin-top: 50px;
 }
-/* Price Tag Styling */
-.price-tag {
-    text-align: center;
-    margin-top: 15px;
-    background: #fff7e6; /* Light golden background */
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid #ff9900; /* Gold border */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+#footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #ccc;
 }
 
-.price-tag p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.price-tag .normal-price {
-    color: #333; /* Standard black text for normal price */
-}
-
-.price-tag .promo-price {
-    color: #017B5E; /* Green for promo price */
-    font-size: 22px;
-}
-
-.price-tag .promo-price strong {
-    font-size: 24px;
-}
-
-.price-tag .note {
-    color: #ff4d4d;
-    font-size: 18px;
-    font-weight: bold;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 26px;
+    }
+    
+    .approval-container {
+        flex-direction: column;
+    }
+    
+    .symptoms-list {
+        column-count: 1;
+    }
+    
+    .testimonial-slider {
+        height: auto;
+    }
+    
+    .order-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+        }
